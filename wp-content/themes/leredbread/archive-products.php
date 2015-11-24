@@ -42,7 +42,9 @@ get_header(); ?>
             <?php while ( have_posts() ) : the_post(); ?>
                 <div class="archive-product">
                 <?php if ( has_post_thumbnail() ) : ?>
+                <a href="<?php the_permalink(); ?>">
                 <?php the_post_thumbnail( 'medium' ); ?>
+              </a>
                 <?php endif; ?>
                 <p class= "price" ><?php the_title( ); ?>
                  Price: <?php echo esc_html( CFS()->get('price')); ?></p>

@@ -717,14 +717,15 @@ body {
   min-width: 1024px;
   margin: 0 auto;
   text-align: center;
-  font-family: 'overlock',sans-serif; }
+  font-family: 'opensans',Arial, sans-serif; }
 
 li {
   list-style: none; }
 
 a {
   text-decoration: none;
-  color: #db272a; }
+  color: #db272a;
+  font-family: 'overlock',sans-serif; }
 
 h1 {
   text-transform: uppercase;
@@ -733,6 +734,44 @@ h1 {
 h2 {
   text-transform: uppercase;
   font-family: 'overlock',sans-serif; }
+
+h3 {
+  text-transform: uppercase;
+  font-family: 'overlock',sans-serif; }
+
+.main-navigation li.current_page_item {
+  border-bottom: 3px solid #db272a; }
+
+.main-navigation li:first-child {
+  border-left: 1px solid #e1e1e1; }
+
+.main-navigation li:last-child {
+  border-right: none; }
+
+.main-navigation form {
+  margin: 0 20px;
+  height: 30px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+
+.main-navigation fieldset {
+  border: none;
+  margin: 8px 0; }
+
+.main-navigation label input {
+  border: none; }
+
+.main-navigation button {
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  outline: 0;
+  font-size: 1rem;
+  color: gray; }
 
 .main-navigation {
   background-color: #fff;
@@ -746,33 +785,6 @@ h2 {
   padding: 1rem 1rem;
   font-weight: bold;
   font-size: 1.2rem; }
-
-.main-navigation li.current_page_item {
-  border-bottom: 3px solid #db272a; }
-
-.main-navigation li:first-child {
-  border-left: 1px solid #e1e1e1; }
-
-.main-navigation li:last-child {
-  border-right: none;
-  font-size: 1rem; }
-
-.main-navigation form {
-  margin: 0 auto;
-  height: 30px;
-  width: 500px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end; }
-
-.main-navigation fieldset {
-  border: none; }
-
-.main-navigation label input {
-  border: none; }
 
 .container {
   width: 1024px;
@@ -825,7 +837,8 @@ h2 {
 .text-head {
   font-size: 7rem;
   color: white;
-  font-weight: bold; }
+  font-weight: bold;
+  font-family: 'overlock', sans-serif; }
 
 .heading img {
   width: 90%; }
@@ -1209,8 +1222,8 @@ footer {
   padding: .75rem 1.5rem;
   text-decoration: none;
   border-radius: 3px;
-  width: 120px;
-  color: #f1f1f1; }
+  color: #f1f1f1;
+  width: 120px; }
 
 .wpcf7 .text-name {
   display: -webkit-flex;
@@ -1223,6 +1236,9 @@ footer {
 
 .wpcf7 .text-name #name {
   margin-right: 5px; }
+
+.wpcf7 .required {
+  color: #db272a; }
 
 .container-products {
   width: 1024px;
@@ -1265,6 +1281,9 @@ footer {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-flex: 0 1 25%;
       -ms-flex: 0 1 25%;
           flex: 0 1 25%;
@@ -1399,3 +1418,55 @@ footer {
 .widget span {
   font-weight: bold;
   color: #db272a; }
+
+.comment-form label {
+  color: gray;
+  display: block;
+  margin-bottom: .5rem; }
+
+.comment-form-author {
+  margin-right: 1%;
+  width: 49%;
+  float: left; }
+
+.comment-form-author input {
+  width: 100%; }
+
+.comment-form-email input {
+  width: 100%; }
+
+.comment-form-email {
+  width: 50%;
+  float: left; }
+
+.comment-form-url {
+  width: 100%; }
+
+.comment-form-url input {
+  width: 100%; }
+
+.form-submit input[type=submit] {
+  background: #400c0d;
+  cursor: pointer;
+  line-height: 1;
+  padding: .80rem 1.5rem;
+  text-decoration: none;
+  border-radius: 3px;
+  color: #f1f1f1; }
+
+.search-form fieldset {
+  border: none;
+  font-weight: bold; }
+
+.search-submit {
+  border: none;
+  border-radius: 3px;
+  background: #400c0d;
+  color: #fff;
+  cursor: pointer;
+  line-height: 1;
+  padding: .75rem 1.5rem;
+  text-decoration: none; }
+
+.search-form .search-field {
+  padding: 0.4rem 0.3rem; }

@@ -26,7 +26,6 @@ get_header(); ?>
 
 			<?php endwhile; ?>
             </div>
-			<?php the_posts_navigation(); ?>
 
 		<?php else : ?>
 

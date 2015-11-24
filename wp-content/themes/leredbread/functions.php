@@ -104,12 +104,6 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 
 
-add_filter( 'wp_nav_menu_items','add_search_box', 10, 2 );
-function add_search_box( $items, $args ) {
-    $items .= '<li>' . get_search_form( false ) . '</li>';
-    return $items;
-}
-
 function twelve_posts_on_archivepage( $query ) {
     if ( $query->is_archive() && $query->is_main_query() ) {
         $query->set( 'posts_per_page', 12 );
