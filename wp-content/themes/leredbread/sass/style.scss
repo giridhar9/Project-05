@@ -1,0 +1,690 @@
+/*!
+Theme Name: RED Starter Theme
+Theme URI: http://underscores.me/
+Author: RED Academy
+Author URI: http://www.redacademy.com
+Description: A WordPress starter theme for RED Academy students.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+RED Starter Theme is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Embedded Fonts
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Asides
+	## Comments
+# Media
+	## Captions
+	## Galleries
+# Page Templates
+	## Front page
+--------------------------------------------------------------*/
+
+// Imported but not included in the stylesheet.
+
+@import "variables";
+@import "mixins";
+
+// CSS included in style.css.
+
+@import "normalize";
+@import "fonts";
+@import "typography";
+@import "elements";
+@import "forms";
+@import "navigation";
+@import "modules";
+@import "widgets";
+@import "content";
+@import "media";
+@import "page-templates";
+
+body {
+	min-width: 1024px;
+	margin: 0 auto;
+	text-align: center;
+	font-family: 'overlock',sans-serif;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: #db272a;
+}
+h1 {
+	text-transform: uppercase;
+	font-family: 'overlock',sans-serif;
+}
+h2 {
+	text-transform: uppercase;
+	font-family: 'overlock',sans-serif;
+}
+// header....
+.main-navigation li.current_page_item {
+  border-bottom: 3px solid #db272a;
+ }
+ .main-navigation li:first-child {
+ 	border-left: 1px solid #e1e1e1;
+ }
+ .main-navigation li:last-child {
+ 	border-right: none;
+ 	font-size: 1rem;
+ }
+ .main-navigation form {
+	margin: 0 auto;
+	height: 30px;
+	width: 500px;
+    display: flex;
+    justify-content: flex-end;
+	}
+.main-navigation fieldset {
+	border: none;
+}
+.main-navigation label input {
+	border: none;
+}
+.main-navigation {
+    background-color: #fff;
+    border-top: 1px solid #e1e1e1;
+    box-shadow: 0 2px 3px 0 rgba(150,150,150,.25);
+}
+.main-navigation li {
+    background-color: #fff;
+    border-right: 1px solid #e1e1e1;
+    box-shadow: 0 2px 3px 0 rgba(150,150,150,.25);
+    padding: 1rem 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+ 
+
+.container {
+	width: 1024px;
+	margin: 0 auto;
+}
+
+.site-branding {
+	width: 1024px;
+	height: 125px;
+	display: flex;
+	margin: 0 auto;
+}
+.site-branding img {
+	width: 50%;
+}
+.site-branding .icons{
+	width: 50%;
+	color: gray;
+	position: absolute;
+    right: 0;
+    top: 20%;
+    transform: translateY(-10%);
+}
+.icons li {
+	display: inline-block;
+	margin-left: 1.5rem;
+}
+// ...header
+
+// front-page...
+.site-header {
+	margin-top: 2.5rem;
+	border-top: 1px solid #e1e1e1;
+	text-align: center;
+}
+.heading {
+	background: url(../../images/hero-bread.jpg) center top no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 550px;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+.text-head {
+	font-size: 7rem;
+	color: white;
+	font-weight: bold;
+}
+.heading img {
+	width: 90%;
+}
+
+.product img {
+	display: block;
+	margin: 0 auto;
+	width: 85%;
+}
+ .product {
+    display: flex;
+    flex-direction: column;
+	width: 22%;
+}
+.text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-self: flex-end;
+	width: 100%;
+	height: auto;
+}
+.text p{
+	text-align: left;
+}
+img {
+	height: auto;
+}
+.site-branding img {
+	width: 30%;
+}
+.product_t {
+	display: flex;
+	justify-content: space-between;
+    margin-top: 3rem;
+    text-align: center;
+    margin: 0 auto;
+    width: 1024px;
+}
+hr.line:after {
+    background: 0 0;
+    content: '\f111';
+    display: inline-block;
+    font-size: 14.4px;
+    font-size: .9rem;
+    font-family: FontAwesome;
+    position: relative;
+    top: -.875em;
+}
+hr.line{
+	text-align: center;
+	width: 50%;
+}
+.line {
+	margin-bottom: 40px;
+}
+.container-images {
+	display: flex;
+	justify-content: space-between;
+}
+
+.container-images li {
+  background-color: #fff;
+  border: 1px solid #e1e1e1;
+  flex: 1 0 25%;
+  max-width: 25%;
+  height: 300px;
+}
+.images #thumbnail{
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+}
+#thumbnail img {
+	height: 100%;
+}
+.container-images h3 {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.images {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 3rem;
+	width: 1024px;
+}
+.images h2 {
+	text-transform: uppercase;
+}
+.testimonials-head h2 {
+	text-transform: uppercase;
+	text-align: center;
+}
+.testimonials {
+	text-align: center;
+	width: 1024px;
+	margin: 0 auto;
+}
+.testimonials img {
+	margin-right: 1.5rem;
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
+    margin-top: 1rem;
+}
+.testimonials ul {
+	display: flex;
+    justify-content: space-between;
+    flex-pack: justify;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+.testimonials li {
+    display: flex;
+    flex: 1 0 50%;
+    padding: 1.5rem;
+}
+.testimonials li:first-child{
+	border-right: 1px dashed #d2d2d2;
+	border-bottom: 1px dashed #d2d2d2;
+}
+.testimonials li:nth-child(2){
+	border-bottom: 1px dashed #d2d2d2;
+}
+.testimonials li:nth-child(3){
+	border-right: 1px dashed #d2d2d2;
+}
+.review {
+	text-align: left;
+}
+.review .name{
+	font-weight: bold;
+}
+.see-menu {
+	background-color: #fafafa;
+    border: 1px solid #e1e1e1;
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1024px;
+}
+.see-menu a {
+	color: #f1f1f1;
+}
+.button-menu {
+	background: #400c0d;
+    cursor: pointer;
+    line-height: 1;
+    padding: .75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 3px;
+}
+// ...front-page
+
+
+.archive-products {
+	display: flex;
+}
+
+// ...about
+.motto {
+    text-align: center;
+    box-sizing: border-box;
+    color: rgb(34, 34, 34);
+    display: block;
+    font-family: 'open_sans', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 48px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 55px;
+    text-align: center;
+}
+.container11{
+    display: flex;
+    justify-content: space-around;    
+}
+
+.left-side, .right-side{
+  width: 40%;
+  text-align: left;
+}
+.left-side h3{
+    line-height: 0;
+}
+.right-side h3{
+    line-height: 0;
+}
+.container3 {
+	width: 1024px;
+	margin: 0 auto;
+}
+.clearfix:after {
+	content: '';
+    clear: both;
+    display: table;
+    overflow: auto;
+}
+.call-to-action {
+	background-color: #fafafa;
+    border: 1px solid #e1e1e1;
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1024px;
+}
+.call-to-action a {
+	color: #f1f1f1;
+}
+.btn {
+	background: #400c0d;
+    cursor: pointer;
+    line-height: 1;
+    padding: .75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 3px;
+}
+//...about
+
+.entry-header {
+	margin-top: 3rem;
+}
+
+// footer
+footer {
+	background-color: #222222;
+}
+.foot {
+	width: 1024px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+.site-info {
+	text-align: left;
+	margin: 5px auto;
+}
+.site-info p {
+	line-height: .5px;
+	text-align: left;
+	color: white;
+	margin: 0.8em auto;
+}
+.site-info h3 {
+ color: #a1a1a1;
+ line-height: 1.5px;
+}
+.day {
+	color: white;
+	font-weight: bold;
+}
+.hours h3 {
+ color: #a1a1a1;
+}
+.hours {
+	text-align: left;
+}
+.hours p {
+	line-height: 3px;
+	text-align: left;
+	color: white;
+}
+.white {
+	text-align: center;
+}
+.white img{
+	width: 45%;
+}
+.copyright {
+	background-color: #333333;
+	width: 100%;
+	height: 75px;
+	text-align: center;
+	color: white;
+	padding-top: 20px;
+}
+.copyright p{
+	font-size: .8rem;
+}
+// ...footer
+
+// contact page
+.contact-info {
+	display: flex;
+	justify-content: space-between;
+	width: 1024px;
+	margin: 0 auto;
+}
+.contact-page{
+	width: 70%;
+	text-align: left;
+	margin-right: 10px;
+	border-right: 1px solid #e1e1e1;
+}
+.side{
+	width: 30%;
+	text-align: left;
+	margin-left: 15px;
+}
+.widget ul {
+	text-align: left;
+	margin: 0;
+	padding: 0;
+}
+.site-content {
+	width: 100%;
+}
+.entry-header {
+	margin: 0;
+}
+.wpcf7 textarea  {
+  height: 250px;
+  width: 600px;
+  color: #666;
+  background-color: #fafafa;
+  border: 1px solid #e1e1e1;
+  border-radius: 3px;
+}
+.wpcf7 input{
+	width: 290px;
+	color: #666;
+    background-color: #fafafa;
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+}
+.wpcf7 #special-field input{
+	width: 600px;
+}
+.wpcf7 p{
+	color: gray;
+	font-weight: bold;
+}
+.wpcf7 h2{
+	color: gray;
+}
+.wpcf7 input[type=submit]{
+	background: #400c0d;
+    cursor: pointer;
+    line-height: 1;
+    padding: .75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 3px;
+    width: 120px;
+    color: #f1f1f1;
+}
+.wpcf7 .text-name {
+	display: flex;
+	width: 600px;
+}
+.wpcf7 #email {
+	margin-left: 20px;
+}
+.wpcf7 .text-name #name {
+   margin-right: 5px;
+}
+// ...contact page
+
+// products..
+.container-products {
+	width: 1024px;
+	margin: 0 auto;
+}
+.product-type {
+	width: 15%;
+}
+.product-wrapper {
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	align-items: center;
+	margin: 0 auto;
+}
+.archive-products {
+	display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+}
+.products-motto {
+	margin: 50px auto;
+}
+.archive-product {
+	border: 1px solid #e1e1e1;
+	display: flex;
+    flex: 0 1 25%;
+    max-width: 25%;
+}
+.page-header {
+	border-bottom: 1px dashed #d2d2d2;
+}
+.taxonomy-single {
+	display: flex;
+	align-items: flex-start;
+	margin: 20px auto;
+	border-bottom: 1px dashed #d2d2d2;
+}
+.taxonomy-image {
+	display: block;
+    height: 150px;
+    min-width: 150px;
+    width: 150px;
+}
+.taxonomy-para {
+	margin: 0 20px;
+	height: 150px;
+}
+.taxonomy-para h3 {
+	margin: .7em;
+}
+.taxonomy-para p{
+	margin: .7em;
+}
+.single-product-page {
+	display: flex;
+	width: 1024px;
+	margin: 0 auto;
+}
+.single-product-side {
+	width: 25%;
+	text-align: left;
+	margin-left: 30px;
+}
+.single-product {
+	text-align: left;
+	width: 70%;
+	margin: 0 auto;
+	border-right: 1px solid #e1e1e1;
+}
+.single-product img {
+	width: 600px;
+	height: 540px;
+}
+.single-product .price {
+	font-family: 'Overlock Web',sans-serif;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+// blog page....
+.blogpage {
+	display: flex;
+	width: 1024px;
+	margin: 30px auto;
+}
+.blogposts {
+	text-align: left;
+	width: 70%;
+	margin: 0 auto;
+	border-right: 1px solid #e1e1e1;
+}
+.blog-side {
+	width: 30%;
+	text-align: left;
+	margin-left: 30px;
+}
+.post-description {
+	width: 85%;
+}
+.single-page {
+	display: flex;
+	width: 1024px;
+	margin: 30px auto;
+}
+.single-blog {
+	text-align: left;
+	width: 70%;
+	margin: 30px auto;
+	border-right: 1px solid #e1e1e1;
+}
+.single-side {
+	width: 25%;
+	text-align: left;
+	margin-left: 30px;
+	margin-top: 10px;
+}
+.taxonomy {
+	display: flex;
+	width: 1024px;
+	margin: 0 auto;
+}
+.taxonomy-products {
+	text-align: left;
+	width: 75%;
+	margin: 0 auto;
+	border-right: 1px solid #e1e1e1;
+}
+.taxonomy-side {
+	width: 25%;
+	text-align: left;
+	margin-left: 30px;
+}
+.content-area {
+	margin: 0 auto;
+}
+.entry-content{
+	width: 90%;
+}
+.entry-footer {
+	background-color: white;
+}
+.comments-area {
+	width: 90%;
+}
+
+.widget span {
+	font-weight: bold;
+	color: #db272a;
+}
