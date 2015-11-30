@@ -95,7 +95,49 @@ a {
 	.current_page_ancestor > a {
 	}
 }
-
+.main-navigation li.current_page_item {
+  border-bottom: 3px solid #db272a;
+ }
+ .main-navigation li:first-child {
+ 	border-left: 1px solid #e1e1e1;
+ }
+ .main-navigation li:last-child {
+ 	border-right: none;
+ }
+ .main-navigation form {
+	margin: 0 20px;
+	height: 30px;
+    display: flex;
+    justify-content: flex-end;
+	}
+.main-navigation fieldset {
+	border: none;
+	margin: 8px 0;
+}
+.main-navigation label input {
+	border: none;
+}
+.main-navigation button {
+	border: none;
+	border-radius: 0;
+	background-color: transparent;
+	outline: 0;
+	font-size: 1rem;
+	color: gray;
+}
+.main-navigation {
+    background-color: #fff;
+    border-top: 1px solid #e1e1e1;
+    box-shadow: 0 2px 3px 0 rgba(150,150,150,.25);
+}
+.main-navigation li {
+    background-color: #fff;
+    border-right: 1px solid #e1e1e1;
+    box-shadow: 0 2px 3px 0 rgba(150,150,150,.25);
+    padding: 1rem 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {

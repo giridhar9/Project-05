@@ -20,9 +20,10 @@ get_header();
     <?php    foreach($terms as $term): ?>
     <div class="product">
       <img src="<?php echo get_template_directory_uri(); ?>/images/<?php echo $term->slug;?>.png"/> 
-      <div class="text"><h3><?php   echo $term->name;?></h3>
+      <div class="text"><h3><?php echo $term->name;?></h3>
         <p><?php echo $term->description;?>
-          <a href="<?php echo get_term_link($term); ?>">See More...</a></p>
+          <a href="<?php echo get_term_link($term); ?>">See More...</a>
+        </p>
         </div>
       </div>
     <?php endforeach; ?>
@@ -44,7 +45,6 @@ get_header();
    $blog_posts = get_posts( $args ); // returns an array of posts
    ?>
    <?php foreach ( $blog_posts as $post ) : setup_postdata( $post ); ?>
-   
    <li> 
      <div id="thumbnail"> <?php the_post_thumbnail(); ?></div>
      <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
@@ -52,7 +52,6 @@ get_header();
       <?php comments_number('/ 0 Comments'); ?></p>
 
     </li>
-
 
   <?php endforeach; wp_reset_postdata(); ?>
 </div>
